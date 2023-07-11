@@ -12,6 +12,7 @@
     "@antfu/eslint-config": "^0.39.7",
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
+    "@unocss/nuxt": "^0.53.5",
     "eslint": "^8.44.0",
     "nuxt": "^3.6.2"
   }
