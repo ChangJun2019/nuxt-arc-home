@@ -6,11 +6,17 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "cleanup": "npx nuxi@latest cleanup"
+  },
+  "dependencies": {
+    "consola": "^3.2.3",
+    "unsplash-js": "^7.0.18"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.7",
     "@nuxt/devtools": "latest",
+    "@nuxt/image": "1.0.0-rc.1",
     "@nuxthq/ui": "^2.5.0",
     "@types/node": "^18.16.19",
     "@unocss/nuxt": "^0.53.5",
