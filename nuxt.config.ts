@@ -10,10 +10,11 @@ export default defineNuxtConfig({
     '@vue-macros/nuxt',
     '@nuxthq/ui',
     '@nuxt/image',
+    'dayjs-nuxt',
   ],
 
+  // https://image.nuxtjs.org/configuration
   image: {
-    // https://image.nuxtjs.org/configuration
 
     domains: [
       'https://images.unsplash.com',
@@ -34,6 +35,12 @@ export default defineNuxtConfig({
     },
     densities: [1, 2, 3],
     unsplash: {},
+  },
+
+  // https://github.com/fumeapp/dayjs
+  dayjs: {
+    plugins: ['timezone'],
+    defaultTimezone: '',
   },
 
   css: [

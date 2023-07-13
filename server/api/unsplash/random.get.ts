@@ -13,7 +13,7 @@ export default defineEventHandler<RandomPhoto>(async (event) => {
   // https://github.com/unsplash/unsplash-js#photosgetrandomarguments-additionalfetchoptions
   const unsplash = getUnsplashClient(event)
   const result = await unsplash?.photos.getRandom({
-    query: 'winter wallpaper',
+    query: 'Winter',
     orientation: 'landscape',
   })
   if (result?.errors) {
