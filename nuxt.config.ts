@@ -43,6 +43,8 @@ export default defineNuxtConfig({
     defaultTimezone: '',
   },
 
+  macros: {},
+
   css: [
     '@unocss/reset/tailwind.css',
     '@/style/main.css',

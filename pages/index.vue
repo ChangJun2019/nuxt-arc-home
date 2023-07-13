@@ -9,6 +9,12 @@ const modifiers = computed(() => {
     auto: 'format,compress',
   }
 })
+
+const loading = ref(true)
+
+function doSomethingOnLoad() {
+  loading.value = false
+}
 </script>
 
 <template>
@@ -25,7 +31,11 @@ const modifiers = computed(() => {
       :width="width"
       :src="unsplash?.url"
       :modifiers="modifiers"
+      @load="doSomethingOnLoad"
     />
+    <div class="absolute top-0 left-0 w-full h-full z-10 flex justify-center items-center">
+      <CommonLoading :loading="loading" />
+    </div>
     <p v-if="unsplash" class="absolute bottom-5 right-3 text-right px-2 backdrop-blur-sm bg-dark/5 rounded-md animate-fade-in">
       <a class="font-semibold cursor-pointer" :href="unsplash?.html" target="_blank">Photo</a> by
       <a class="font-semibold cursor-pointer" :href="unsplash?.author.url" target="_blank">{{ unsplash?.author.name }}</a>
