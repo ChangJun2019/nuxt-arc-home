@@ -12,6 +12,17 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
 
+  image: {
+    inject: true,
+    domains: [
+      'https://images.unsplash.com',
+    ],
+    alias: {
+      unsplash: 'https://images.unsplash.com',
+    },
+    unsplash: {},
+  },
+
   css: [
     '@unocss/reset/tailwind.css',
   ],

@@ -8,6 +8,9 @@ dependencies:
   consola:
     specifier: ^3.2.3
     version: 3.2.3
+  ufo:
+    specifier: ^1.1.2
+    version: 1.1.2
   unsplash-js:
     specifier: ^7.0.18
     version: 7.0.18
@@ -9448,7 +9451,6 @@ packages:
 
   /ufo@1.1.2:
     resolution: {integrity: sha512-TrY6DsjTQQgyS3E3dBaOXf0TpPD8u9FVrVYmKVegJuFw51n/YB9XPt+U6ydzFG5ZIN7+DIjPbNmXoBj9esYhgQ==}
-    dev: true
 
   /ultrahtml@1.2.0:
     resolution: {integrity: sha512-vxZM2yNvajRmCj/SknRYGNXk2tqiy6kRNvZjJLaleG3zJbSh/aNkOqD1/CVzypw8tyHyhpzYuwQgMMhUB4ZVNQ==}
