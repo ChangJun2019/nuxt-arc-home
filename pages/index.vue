@@ -26,7 +26,7 @@ const modifiers = computed(() => {
       :src="unsplash?.url"
       :modifiers="modifiers"
     />
-    <p class="absolute bottom-5 right-3 text-right px-2 backdrop-blur-sm bg-dark/5 rounded-md animate-fade-in">
+    <p v-if="unsplash" class="absolute bottom-5 right-3 text-right px-2 backdrop-blur-sm bg-dark/5 rounded-md animate-fade-in">
       <a class="font-semibold cursor-pointer" :href="unsplash?.html" target="_blank">Photo</a> by
       <a class="font-semibold cursor-pointer" :href="unsplash?.author.url" target="_blank">{{ unsplash?.author.name }}</a>
     </p>
