@@ -1,6 +1,15 @@
 {
-  "name": "nuxt-app",
+  "name": "elegant-tab",
+  "version": "0.1.1",
   "private": true,
+  "packageManager": "pnpm@8.6.7",
+  "description": "A Elegant Tab page",
+  "author": {
+    "name": "Chang Jun",
+    "email": "52chinaweb@gmail.com",
+    "url": "https://52chinaweb.com/"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

@@ -52,4 +52,25 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'zh-en',
+      },
+      title: 'Elegant Tab',
+      meta: [
+        { name: 'author', content: 'ChangJun' },
+        { name: 'description', content: 'a elegant tab page' },
+        { name: 'og:title', content: 'Elegant Tab' },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:url', content: 'https://52chinaweb.com/' },
+      ],
+      link: [
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/tab-apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/tab-favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/img/tab-favicon-16x16.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
+  },
 })
