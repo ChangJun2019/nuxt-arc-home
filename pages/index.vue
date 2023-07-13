@@ -1,15 +1,31 @@
 <script lang="ts" setup>
-import { parseImageUrl } from '@/utlis/unsplash'
+const { data: unsplash } = await useFetch('/api/unsplash/random')
 
-const { data } = await useFetch('/api/unsplash/random')
-const imgSrc = computed(() => {
-  return parseImageUrl(data.value?.url)
+const { pixelRatio } = useDevicePixelRatio()
+const { width } = useWindowSize()
+const modifiers = computed(() => {
+  return {
+    dpr: pixelRatio,
+    auto: 'format,compress',
+  }
 })
 </script>
 
 <template>
   <div class="flex flex-col w-full h-screen relative top-0 left-0">
-    <nuxt-img preload provider="unsplash" :src="imgSrc" class="absolute top-0 left-0 w-full h-full object-cover" />
+    <nuxt-img
+      class="absolute top-0 left-0 w-full h-full object-cover"
+      preload
+      provider="unsplash"
+      quality="85"
+      fit="crop"
+      sizes="xs:320 sm:640 md:768 lg:1024 xl:1280 xxl:1536 xxxl:1920 2k:2560 4k:3840"
+      densities="x1 x2"
+      loading="lazy"
+      :width="width"
+      :src="unsplash?.url"
+      :modifiers="modifiers"
+    />
   </div>
 </template>
 
