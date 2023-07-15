@@ -5,6 +5,10 @@ export default defineNuxtConfig({
     host: '',
   },
 
+  routeRules: {
+    '/': { ssr: false },
+  },
+
   modules: [
     '@unocss/nuxt',
     '@vueuse/nuxt',

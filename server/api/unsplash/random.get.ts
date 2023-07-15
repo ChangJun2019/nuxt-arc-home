@@ -10,7 +10,7 @@ export interface RandomPhoto {
   }
 }
 
-export default defineEventHandler<RandomPhoto>(async (event) => {
+export default defineEventHandler<RandomPhoto[]>(async (event) => {
   // https://github.com/unsplash/unsplash-js#photosgetrandomarguments-additionalfetchoptions
   const unsplash = getUnsplashClient(event)
   const result = await unsplash?.photos.getRandom({
