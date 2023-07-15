@@ -16,6 +16,7 @@ export default defineEventHandler<RandomPhoto>(async (event) => {
   const result = await unsplash?.photos.getRandom({
     query: 'Winter',
     orientation: 'landscape',
+    count: 20,
   })
   if (result?.errors) {
     throw createError({
@@ -23,14 +24,16 @@ export default defineEventHandler<RandomPhoto>(async (event) => {
       statusMessage: `unsplash error: ${result.errors[0]}`,
     })
   }
-  const photo = result.response as any
-  return {
-    url: photo.urls.raw,
-    html: photo.links.html,
-    download_url: photo.links.download,
-    author: {
-      name: photo.user.name,
-      url: photo.user.links.html,
-    },
-  }
+  const photos = result.response as any
+  return photos.map((photo: any) => {
+    return {
+      url: photo.urls.raw,
+      html: photo.links.html,
+      download_url: photo.links.download,
+      author: {
+        name: photo.user.name,
+        url: photo.user.links.html,
+      },
+    }
+  })
 })

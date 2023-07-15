@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     unsplashAccessKey: '',
+    host: '',
   },
 
   modules: [
