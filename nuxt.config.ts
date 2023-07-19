@@ -1,12 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const dev = process.env.NODE_ENV === 'development'
+
 export default defineNuxtConfig({
   runtimeConfig: {
     unsplashAccessKey: '',
-    host: '',
+    origin: '',
   },
 
   routeRules: {
     '/': { ssr: false },
+    '/api/unsplash/**': {
+      security: {
+        rateLimiter: {
+          tokensPerInterval: 1,
+          interval: 'hour',
+          fireImmediately: true,
+        },
+      },
+      cors: true,
+      headers: {
+        'Sec-Fetch-Site': 'same-origin',
+      },
+    },
   },
 
   modules: [
@@ -16,7 +31,25 @@ export default defineNuxtConfig({
     '@nuxthq/ui',
     '@nuxt/image',
     'dayjs-nuxt',
+    'nuxt-security',
   ],
+
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: dev ? 'unsafe-none' : 'require-corp',
+      contentSecurityPolicy: {
+        'img-src': ['\'self\'', 'data:', 'images.unsplash.com'],
+      },
+      referrerPolicy: 'origin-when-cross-origin',
+    },
+    xssValidator: {
+      stripIgnoreTag: true,
+    },
+    corsHandler: {
+      origin: `${process.env.NUXT_ORIGIN}`,
+      methods: '*',
+    },
+  },
 
   // https://image.nuxtjs.org/configuration
   image: {
