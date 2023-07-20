@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     '/api/unsplash/**': {
       security: {
         rateLimiter: {
-          tokensPerInterval: 1,
+          tokensPerInterval: 3,
           interval: 'hour',
           fireImmediately: true,
         },
