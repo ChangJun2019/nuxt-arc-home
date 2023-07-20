@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     origin: '',
   },
 
+  // https://nuxt.com/modules/umami
+  extends: ['nuxt-umami'],
+
   routeRules: {
     '/': { ssr: false },
     '/api/unsplash/**': {
