@@ -20,10 +20,6 @@ export default defineNuxtConfig({
           fireImmediately: true,
         },
       },
-      cors: true,
-      headers: {
-        'Sec-Fetch-Site': 'same-origin',
-      },
     },
   },
 
@@ -49,7 +45,7 @@ export default defineNuxtConfig({
       stripIgnoreTag: true,
     },
     corsHandler: {
-      origin: `${process.env.NUXT_ORIGIN}`,
+      origin: [`${process.env.NUXT_ORIGIN}`, 'https://umami.52chinaweb.com'],
       methods: '*',
     },
   },
