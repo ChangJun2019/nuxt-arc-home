@@ -36,6 +36,7 @@ export default defineNuxtConfig({
   security: {
     headers: {
       crossOriginEmbedderPolicy: dev ? 'unsafe-none' : 'require-corp',
+      crossOriginResourcePolicy: 'same-site',
       contentSecurityPolicy: {
         'img-src': ['\'self\'', 'data:', 'images.unsplash.com'],
       },
@@ -43,10 +44,6 @@ export default defineNuxtConfig({
     },
     xssValidator: {
       stripIgnoreTag: true,
-    },
-    corsHandler: {
-      origin: [`${process.env.NUXT_ORIGIN}`, 'https://umami.52chinaweb.com'],
-      methods: '*',
     },
   },
 
