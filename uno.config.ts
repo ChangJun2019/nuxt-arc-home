@@ -9,7 +9,15 @@ import {
 } from 'unocss'
 
 export default defineConfig({
-  shortcuts: [],
+  shortcuts: [
+    {
+      // background
+      'box-bg-base': 'bg-$c-box-bg-base',
+      'box-bg-hover': 'bg-$c-box-bg-hover',
+      'box-bg-disabled': 'bg-$c-box-bg-disabled',
+      'box-bg-active': 'bg-$c-box-bg-active',
+    },
+  ],
   theme: {},
   presets: [
     presetUno({}),

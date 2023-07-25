@@ -1,0 +1,5 @@
+html,body{
+  --at-apply: font-sans;
+  background-color: var(--c-body-bg-base);
+  background-image: url("~/assets/img/noise.png");
+}

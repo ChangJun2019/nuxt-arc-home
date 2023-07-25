@@ -1,0 +1,16 @@
+
+:root {
+  --c-body-bg-base: #6ee7b7;
+  --c-box-bg-base: rgba(0,0,0,0.07);
+  --c-box-bg-hover: rgba(0,0,0,0.1);
+  --c-box-bg-disabled: rgba(255,255,255,0.2);
+  --c-box-bg-active: rgba(255,255,255,0.3);
+}
+
+.dark{ 
+  --c-body-bg-base: #10b981;
+  --c-box-bg-base: rgba(255,255,255,0.08);
+  --c-box-bg-hover: rgba(255,255,255,0.15);
+  --c-box-bg-disabled: rgba(255,255,255,0.2);
+  --c-box-bg-active: rgba(255,255,255,0.3);
+}
