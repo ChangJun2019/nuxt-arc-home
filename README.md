@@ -4,7 +4,7 @@ A homepage that uses [Unsplash](https://unsplash.com/) images, mainly as my [Arc
 
 ## Screenshots
 
-![screentshots](https://github.com/ChangJun2019/nuxt-arc-home/assets/32004895/3edc408c-aaf3-4c40-acaf-b85193f0c720)
+![943shots_so](https://github.com/ChangJun2019/nuxt-arc-home/assets/32004895/563d62f5-22f8-4bc9-a8f4-88321b73d87b)
 
 ## Credits
 - [Nuxt](https://nuxt.com/)
